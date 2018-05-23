@@ -25,9 +25,20 @@
 <body>
 
 <script src="js/three.min.js"></script>
+<audio id="audio" autoplay="autopaly" loop="loop">
+  <source src="faraway.mp3" type="audio/mp3"/>
+</audio>
 
 <div id="world"></div>
 
+<script>
+    $(function(){
+        $("#audio")[0].play();
+    })
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        $("#audio")[0].play();
+    }, false);
+</script>
 <script>
 var Colors = {
 	red:0xf25346,
